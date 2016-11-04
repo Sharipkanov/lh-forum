@@ -3,12 +3,18 @@ var doc = document;
 function LHFORUM() {
     var _self = this;
 
-    _self.removeAfterTest();
+    _self.imageHalfSize();
 }
 
-LHFORUM.prototype.removeAfterTest = function () {
-    console.log('Script works perfectly...');
-    console.log("Don't forget to remove this prototype!");
+LHFORUM.prototype.imageHalfSize = function () {
+    var images = doc.querySelectorAll('[data-half-size]');
+
+    for(var i=0; i<images.length; i++) {
+        var currentWidth = images[i].offsetWidth,
+            halfWidth = currentWidth / 2;
+
+        images[i].style.width = halfWidth + 'px';
+    }
 };
 
 (function ($) {
@@ -16,5 +22,7 @@ LHFORUM.prototype.removeAfterTest = function () {
 
         // Past login code here...
         var app = new LHFORUM;
+
+        $('[data-phone-mask]').mask('+7 (000) 000-0000');
     });
 })(jQuery);

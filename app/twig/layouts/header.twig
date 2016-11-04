@@ -1,72 +1,77 @@
-<nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
-            <a href="/" class="navbar-brand">LARSON</a>
+<header class="header">
+    <nav class="uk-navbar">
+        <div class="uk-container uk-container-center">
+            <a href="#" class="uk-navbar-brand"><img src="images/logo.png" alt="LARSON&HOLZ LOGO" class="logo"></a>
+            <div class="uk-navbar-flip">
+                <div class="nav-info lang-info uk-hidden-small">
+                    <a href="#" class="uk-active">Ru</a> | <a href="#">En</a>
+                </div>
+                <div class="nav-info phone-info uk-hidden-small">
+                    <a href="tel:8(800) 550 08 85">8(800) 550 08 85</a>
+                </div>
+            </div>
         </div>
-        <div class="collapse navbar-collapse">
-            <p class="navbar-text navbar-right"><a href="tel:8(800) 550 08 85">8(800) 550 08 85</a></p>
-            <ul class="lang-list list-inline navbar-right">
-                <li class="navbar-text"><a href="#">Ru</a></li>
-                <li class="navbar-text"><a href="#">En</a></li>
-            </ul>
+    </nav>
+    <div class="uk-container uk-container-center">
+        <h3 class="header__title_info">30 Ноября в 19:00  •  Рэдиссон Славянская, Москва</h3>
+        <h1 class="header__title">ЕЖЕГОДНЫЙ БИЗНЕС ФОРУМ</h1>
+        <h4 class="header__title_text">БОЛЬШОЙ ЕЖЕГОДНЫЙ ЭКОНОМИЧЕСКИЙ ФОРУМ МОСКВА-2016</h4>
+        <h4 class="header__title_text">1 и 2 декабря — частные консультации и парад мастер-классов (площадка Парк Мира)</h4>
+
+        <div class="header__info">
+            <div class="uk-grid uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-large uk-margin-small-top" data-uk-grid-margin>
+                <div class="uk-text-center">
+                    <i class="fri fri-circle-d"></i>
+                    <p class="section__text--clight">Антикризисное управление. Могут ли санкции принести доход?</p>
+                </div>
+                <div class="uk-text-center">
+                    <i class="fri fri-web"></i>
+                    <p class="section__text--clight">Почему клиенты выбирают партнерство с Ларсон Холц?</p>
+                </div>
+                <div class="uk-text-center">
+                    <i class="fri fri-graph"></i>
+                    <p class="section__text--clight">Инвестиционное планирование. Расчет доходности. Риск-менеджмент.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__btns uk-text-center">
+            <a href="#reg-switch" class="uk-button header__btns_btn" data-uk-smooth-scroll>Зарегистрироваться</a>
+            <span class="header__btns_text uk-hidden-small">или</span>
+            <a href="#" class="header__btns_link">Смотреть промо-ролик</a>
+        </div>
+
+        <div class="b__timer">
+            <div class="uk-grid uk-grid-large" data-uk-grid-margin>
+                <div class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-2-5">
+                    <h4 class="b__timer_title">До начала форума осталось:</h4>
+                </div>
+                <div class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-2-5">
+                    <ul class="b__timer_info info">
+                        <li class="info__item">
+                            <p class="info__item_time">25</p>
+                            <p class="info__item_text">дней</p>
+                        </li>
+                        <li class="info__item">
+                            <p class="info__item_time">15</p>
+                            <p class="info__item_text">часов</p>
+                        </li>
+                        <li class="info__item">
+                            <p class="info__item_time">48</p>
+                            <p class="info__item_text">минут</p>
+                        </li>
+                        <li class="info__item">
+                            <p class="info__item_time">05</p>
+                            <p class="info__item_text">секунд</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-5">
+                    <div class="b__timer_btn">
+                        <a href="#" class="uk-button">Участвовать</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
-
-<!-- О ФОРУМЕ -->
-<div class="container">
-    <section class="well well-sm">
-        <h5 class="text-muted text-uppercase text-center">О ФОРУМЕ</h5>
-        <ul class="list-inline text-center">
-            <li><h3 class="text-info">Ежегодный бизнес форум от Larson&Holz</h3></li>
-        </ul>
-        <p class="text-primary text-center">Our long standing vision has been to bypass the usual admin dashboard structure, and move forward with a more sophisticated yet simple framework that would create a credible impact on the many conventional dashboard users.</p>
-        <p class="text-primary text-center">Our long standing vision has been to bypass the usual admin dashboard structure, and move forward with a more sophisticated yet simple framework that would create a credible impact on the many conventional dashboard users.</p>
-    </section>
-</div>
-
-<!-- СПИКЕРЫ И СПЕЦИАЛЬНЫЕ ГОСТИ -->
-<div class="container">
-    <section class="well well-sm">
-        <h5 class="text-muted text-uppercase text-center">СПИКЕРЫ И СПЕЦИАЛЬНЫЕ ГОСТИ</h5>
-        <ul class="list-inline text-center">
-            <li><h3><a href="#" class="text-info">Спикеры</a></h3></li>
-            <li><h3><a href="#" class="text-info">Специальные гости</a></h3></li>
-        </ul>
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail text-center">
-                    <img src="images/ava.png" alt="">
-                    <div class="caption">
-                        <h3><a href="#vladmirSteps" class="text-info" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample">Владимир Кузовлев</a></h3>
-                        <p class="text-muted">Независимый эксперт, практикующий финансовый управляющий с опытом более 10 лет</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail text-center">
-                    <img src="images/ava2.png" alt="">
-                    <div class="caption">
-                        <h3><a href="#" class="text-info">Ольга Прохода</a></h3>
-                        <p class="text-muted">Финансовый эксперт, аналитик и консультант. Практика более 6 лет</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail text-center">
-                    <img src="images/ava3.png" alt="">
-                    <div class="caption">
-                        <h3><a href="#" class="text-info">Олег Дмитриев</a></h3>
-                        <p class="text-muted">независимый эксперт, практикующий финансовый управляющий с опытом более 10 лет</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12">
-                <div class="collapse text-center" id="vladmirSteps">
-                    <h4>«5 шагов успеха от Владимира Кузовлева»</h4>
-                    <small>5 активов, которые меньше, чем за год позволят удвоить капитал</small>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
+</header>

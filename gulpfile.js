@@ -6,7 +6,6 @@ var gulp         = require('gulp'),
     twig         = require('gulp-twig'),
     htmlbeautify = require('gulp-html-beautify'),
     sass         = require("gulp-sass"),
-    spritesmith  = require('gulp.spritesmith'),
     prefix       = require("gulp-autoprefixer"),
     minifyCss    = require('gulp-minify-css'),
     uglify       = require('gulp-uglify'),
@@ -14,7 +13,8 @@ var gulp         = require('gulp'),
     callback     = require('gulp-callback'),
     clean        = require('gulp-clean'),
     notify       = require('gulp-notify'),
-    browserSync  = require('browser-sync');
+    browserSync  = require('browser-sync'),
+    compass      = require('gulp-compass');
 
 /* PRODUCTION PLUGINS ----------------------------------------------------------
  ---------------------------------------------------------------------------- */
@@ -113,28 +113,22 @@ gulp.task('twig', function () {
     return null;
 });
 
-/* SPRITES ------------------------------------------------------------------ */
-gulp.task('sprite', function() {
-    var spriteData;
-
-    spriteData = gulp.src(sources.images.icons.default)
-        .pipe(plumber({
-            errorHandler: onError
+/* COMPASS ------------------------------------------------------------------ */
+gulp.task('compass', function () {
+    gulp.src(sources.sass.watch)
+        .pipe(plumber())
+        .pipe(compass({
+            sass: sources.sass.dist,
+            css: sources.css.dist,
+            js: sources.js.dist,
+            image: 'app/images'
         }))
-        .pipe(spritesmith({
-            retinaSrcFilter: sources.images.icons.retina,
-            retinaImgName: '../images/sprite@2x.png',
-            cssName: '_sprites.sass',
-            imgName: '../images/sprite.png'
-        }));
-
-    spriteData.css.pipe(gulp.dest(sources.sass.dist));
-
-    return spriteData.img.pipe(gulp.dest(sources.images.dist));
+        .pipe(gulp.dest(sources.css.dist))
+        .pipe(browserSync.reload({stream: true}));
 });
 
 /* SASS --------------------------------------------------------------------- */
-gulp.task('sass', ['sprite'], function() {
+gulp.task('sass', ["compass"], function() {
     return gulp.src(sources.sass.src)
         .pipe(plumber({
             errorHandler: onError
@@ -207,7 +201,6 @@ gulp.task('watch', function () {
     gulp.watch(sources.sass.watch, ['sass']);
     // gulp.watch(sources.pug.watch, ["pug"]);
     gulp.watch(sources.twig.watch, ["twig"]);
-    gulp.watch(sources.images.icons.default, ["sass"]);
     gulp.watch(sources.js.watch).on('change', browserSync.reload);
 });
 
