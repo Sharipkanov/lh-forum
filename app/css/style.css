@@ -1214,6 +1214,7 @@ a {
 }
 [class^="section__switcher"] > li.uk-active a {
   color: #152844;
+  border-bottom: none;
 }
 
 a[class^="section__title_link"] {
@@ -1223,12 +1224,15 @@ a[class^="section__title_link"] {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  border-bottom: 1px dashed #00b0f4;
 }
 a[class^="section__title_link"]:visited, a[class^="section__title_link"]:focus {
   color: #00b0f4;
+  border-bottom: none;
 }
 a[class^="section__title_link"]:hover, a[class^="section__title_link"]:active {
   color: #152844;
+  border-bottom: none;
 }
 
 [class*="--clight"] {
@@ -1686,9 +1690,6 @@ a[class^="section__title_link"]:hover, a[class^="section__title_link"]:active {
   font-size: 22px;
   color: #152844;
 }
-.paymanent_data {
-  margin-top: 11px;
-}
 .paymanent_info {
   padding: 20px 75px 40px;
 }
@@ -1771,7 +1772,7 @@ a[class^="section__title_link"]:hover, a[class^="section__title_link"]:active {
   font-size: 16px;
   color: #89a7aa;
   display: block;
-  margin: 3px 0;
+  margin: 26px 0 3px;
 }
 .paymanent_info select {
   width: calc(50% - 8px);

@@ -533,6 +533,7 @@ a
     &.uk-active
       a
         color: #152844
+        border-bottom: none
 
 a[class^="section__title_link"]
   color: #00b0f4
@@ -541,14 +542,17 @@ a[class^="section__title_link"]
   -moz-transition: all .3s ease-in-out
   -o-transition: all .3s ease-in-out
   transition: all .3s ease-in-out
+  border-bottom: 1px dashed #00b0f4
 
   &:visited,
   &:focus
     color: #00b0f4
+    border-bottom: none
 
   &:hover,
   &:active
     color: #152844
+    border-bottom: none
 
 [class*="--clight"]
   color: #fff
@@ -944,7 +948,6 @@ a[class^="section__title_link"]
       color: #152844
 
   &_data
-    margin-top: 11px
 
   &_info
     padding: 20px 75px 40px
@@ -995,7 +998,7 @@ a[class^="section__title_link"]
       font-size: 16px
       color: #89a7aa
       display: block
-      margin: 3px 0
+      margin: 26px 0 3px
 
     select
       width: calc(50% - 8px)
