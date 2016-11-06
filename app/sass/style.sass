@@ -137,6 +137,9 @@ a
     max-width: 145px
     width: 100%
 
+.uk-form-row + .uk-form-row
+  margin-top: 38px
+
 .uk-article
   width: 274px
   border-radius: 5px
@@ -565,7 +568,8 @@ a[class^="section__title_link"]
         box-shadow: 0 12px 42px 12px rgba(0, 0, 0, 0.08)
 
       .uk-panel-title
-        color: #152844
+        color: #152844!important
+        border-bottom: none
 
 .uk-panel
   max-width: 340px
@@ -585,7 +589,8 @@ a[class^="section__title_link"]
     box-shadow: 0 12px 42px 12px rgba(0, 0, 0, 0.08)
 
     .uk-panel-title
-      color: #152844
+      color: #152844!important
+      border-bottom: none
 
   > .uk-panel-teaser
     margin: 0
@@ -600,9 +605,10 @@ a[class^="section__title_link"]
 .uk-panel-title
   font-size: 18px
   line-height: 1.56
-  color: #00b0f4
+  color: #00b0f4!important
   font-weight: 600
-  border-bottom: 1px solid dashed
+  border-bottom: 1px dashed #00b0f4
+  display: inline-block
 
 .panel-text
   font-size: 14px
