@@ -4,7 +4,6 @@
   "description": "Gulp first application",
   "author": "Yuriy Bogatyrenko",
   "dependencies": {
-    "uikit": "^2.27.2",
-    "bootstrap": "^3.3.7"
+    "uikit": "^2.27.2"
   }
 }

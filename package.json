@@ -9,6 +9,7 @@
     "gulp-autoprefixer": "^3.1.1",
     "gulp-callback": "0.0.3",
     "gulp-clean": "^0.3.2",
+    "gulp-compass": "^2.1.0",
     "gulp-gm": "0.0.8",
     "gulp-html-beautify": "^1.0.1",
     "gulp-if": "^2.0.1",
