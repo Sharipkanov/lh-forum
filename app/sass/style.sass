@@ -121,6 +121,7 @@ iframe
     font-weight: 600
     font-family: 'Open Sans', sans-serif
     margin-top: 50px
+    width: 240px
 
     &:hover
       background-color: #00b0f4
@@ -139,6 +140,7 @@ iframe
     margin: 0
     max-width: 145px
     width: 100%
+    font-weight: 300
 
 .uk-form-row + .uk-form-row
   margin-top: 38px
@@ -319,7 +321,7 @@ iframe
         text-decoration: none
 
     &_text
-      margin: 0 27.5px
+      margin: 0 27px
       color: #fff
       font-size: 15px
 
@@ -366,16 +368,16 @@ iframe
     line-height: 53px
 
   &.lang-info
-    color: #00b0f4
+    color: #fff
     a
       letter-spacing: 1.3px
-      color: #00b0f4
+      color: #fff
       text-decoration: none
 
       &:focus,
       &:active,
       &:visited
-        color: #00b0f4
+        color: #fff
 
       &.uk-active,
       &:hover
@@ -513,10 +515,11 @@ iframe
           margin: 0
           display: table-cell
 
-[data-auto-width]
-  width: 100%
-  height: 100%
-  object-fit: cover
+.contacts-grid
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
 
 [class^="section__title"]
   font-size: 33px
@@ -562,7 +565,7 @@ iframe
     &.uk-active
       a
         color: #152844
-        border-color: transparent
+        border-color: transparent!important
 
 a[class^="section__title_link"]
   color: #00b0f4
@@ -571,17 +574,17 @@ a[class^="section__title_link"]
   -moz-transition: all .3s ease-in-out
   -o-transition: all .3s ease-in-out
   transition: all .3s ease-in-out
-  border-bottom: 1px dashed #00b0f4
+  border-bottom: 1px dashed #00b0f4!important
 
   &:visited,
   &:focus
     color: #00b0f4
-    border-color: transparent
+    border-color: #00b0f4
 
   &:hover,
   &:active
     color: #152844
-    border-color: transparent
+    border-color: transparent!important
 
 [class*="--clight"]
   color: #fff
@@ -596,6 +599,12 @@ a[class^="section__title_link"]
       .uk-panel-title
         color: #152844!important
         border-color: transparent
+
+#s-switch
+  li
+    .uk-grid
+      .section__text
+        font-weight: 400
 
 .uk-panel
   max-width: 340px
@@ -880,6 +889,9 @@ a[class^="section__title_link"]
       width: 100%
       height: 100%
 
+.mrs-10
+  margin: 0 8px
+
 @media screen and (max-width: 959px)
   .section
     padding: 30px
@@ -1154,6 +1166,9 @@ a[class^="section__title_link"]
           background: #00b0f4
           color: #fff
           margin: 0
+          letter-spacing: 0.6px
+          font-size: 15px
+          font-weight: 600
 
           &:active,
           &:visited,
@@ -1174,6 +1189,10 @@ a[class^="section__title_link"]
           float: right
           width: calc(100% - 21px)
           margin: 0
+
+@media screen and (max-width: 767px)
+  .advertise-btn-wrap
+    text-align: center
 
 @media screen and (max-width: 640px)
   .header__title
