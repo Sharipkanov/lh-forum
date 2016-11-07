@@ -184,14 +184,38 @@ gulp.task('clean', function(){
 /* BUILD -------------------------------------------------------------------- */
 gulp.task('build',["clean"], function(){
     setTimeout(function () {
-        return gulp.src(sources.html.src)
-            .pipe(useref())
-            .pipe(gulpif('*.js', uglify()))
-            .pipe(gulpif('*.css', minifyCss()))
-            .pipe(useref())
-            .pipe(gulp.dest('dist'))
-            .pipe(notify('BUILD was ended'));
+        gulp.start('build_dist');
+        gulp.start('fonts');
+        gulp.start('images');
     }, 500);
+});
+
+gulp.task('build_dist', function(){
+    gulp.src(sources.html.src)
+        .pipe(useref())
+        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('*.css', minifyCss()))
+        .pipe(useref())
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('fonts', function () {
+    gulp.src([
+        'app/bower_components/uikit/fonts/**',
+        'app/fonts/**'
+    ])
+    .pipe(gulp.dest('dist/fonts'));
+});
+
+gulp.task('images', function () {
+    gulp.src([
+        'app/images/**',
+        '!app/images/icons',
+        '!app/images/icons-2x',
+        '!app/images/icons/**',
+        '!app/images/icons-2x/**'
+    ])
+    .pipe(gulp.dest('dist/images'));
 });
 
 /* DEFAULT AND GULP WATCHER ----------------------------------------------------
