@@ -2,8 +2,6 @@ var doc = document;
 
 function LHFORUM() {
     var _self = this;
-
-    _self.imageHalfSize();
 }
 
 LHFORUM.prototype.imageHalfSize = function () {
@@ -55,6 +53,8 @@ LHFORUM.prototype.detect_select = function(bl) {
 
             return false;
         });
+
+        app.imageHalfSize();
 
         $(doc).on('change', '.drop-select__wrapper select', function () {
             app.detect_select($(this));
