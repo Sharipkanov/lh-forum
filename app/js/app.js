@@ -17,6 +17,11 @@ LHFORUM.prototype.imageHalfSize = function () {
     }
 };
 
+LHFORUM.prototype.detect_select = function(bl) {
+    var val = bl.find('option:selected').text();
+    bl.siblings('.drop-select__current').text(val);
+};
+
 (function ($) {
     $(doc).ready(function () {
 
@@ -49,6 +54,14 @@ LHFORUM.prototype.imageHalfSize = function () {
             }, 300);
 
             return false;
+        });
+
+        $(doc).on('change', '.drop-select__wrapper select', function () {
+            app.detect_select($(this));
+        });
+
+        $('.drop-select__wrapper select').each(function () {
+            app.detect_select($(this));
         });
     });
 })(jQuery);
