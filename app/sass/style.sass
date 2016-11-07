@@ -19,6 +19,9 @@ a
   -o-transition: all .3s ease-in-out
   transition: all .3s ease-in-out
 
+iframe
+  width: 100%
+
 .uk-container
   max-width: 1201px
   padding: 0 15px
@@ -30,7 +33,7 @@ a
   width: 100%
   height: 52px
   border-radius: 3px
-  line-height: 52px
+  line-height: 50px
   font-size: 15px
   font-weight: 600
   letter-spacing: 0.6px
@@ -53,7 +56,7 @@ a
     +sprite(btn1-plus)
     vertical-align: middle
     display: inline-block
-    margin-top: -2px
+    margin-top: -3px
     margin-right: 7px
 
 .uk-margin-large-top
@@ -408,6 +411,13 @@ a
   .uk-margin-small-top
     margin-top: 38px!important
 
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
 .section__title_info
   margin-top: 20px
 
@@ -536,7 +546,7 @@ a
     &.uk-active
       a
         color: #152844
-        border-bottom: none
+        border-color: transparent
 
 a[class^="section__title_link"]
   color: #00b0f4
@@ -550,12 +560,12 @@ a[class^="section__title_link"]
   &:visited,
   &:focus
     color: #00b0f4
-    border-bottom: none
+    border-color: transparent
 
   &:hover,
   &:active
     color: #152844
-    border-bottom: none
+    border-color: transparent
 
 [class*="--clight"]
   color: #fff
@@ -569,7 +579,7 @@ a[class^="section__title_link"]
 
       .uk-panel-title
         color: #152844!important
-        border-bottom: none
+        border-color: transparent
 
 .uk-panel
   max-width: 340px
@@ -590,7 +600,7 @@ a[class^="section__title_link"]
 
     .uk-panel-title
       color: #152844!important
-      border-bottom: none
+      border-color: transparent
 
   > .uk-panel-teaser
     margin: 0
@@ -817,7 +827,10 @@ a[class^="section__title_link"]
       margin-top: 16px!important
 
 .special-guests
-  overflow: hidden
+  &::after
+    content: ''
+    display: block
+    clear: both
 
   .uk-panel
     float: left
@@ -826,6 +839,9 @@ a[class^="section__title_link"]
   .video-block
     float: right
     width: calc(100% - 371px)
+
+    iframe
+      margin-bottom: 36px
 
     .section__title
       font-size: 22px
@@ -1025,7 +1041,6 @@ a[class^="section__title_link"]
 
     > div
       display: inline-block
-      font-size: 16px
       width: 60%
       vertical-align: top
       font-size: 13px
@@ -1048,6 +1063,16 @@ a[class^="section__title_link"]
           background: #00b0f4
           color: #fff
           margin: 0
+
+          &:active,
+          &:visited,
+          &:focus
+            background: #00b0f4
+            color: #fff
+
+          &:hover
+            background: rgb(0, 161, 224)
+            color: #fff
 
       &:first-child
         i
