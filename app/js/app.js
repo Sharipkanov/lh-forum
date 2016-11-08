@@ -77,5 +77,11 @@ LHFORUM.prototype.detect_select = function(bl) {
                 }
             }, 1);
         });
+
+        $('#video-modal').on('hide.uk.modal', function(){
+            var iframe = $(this).find('iframe');
+
+            iframe.attr('src', '');
+        });
     });
 })(jQuery);
