@@ -956,6 +956,10 @@ iframe {
   color: #ffffff;
   line-height: 32px;
 }
+.header__title_text > span {
+  color: #00b0f4;
+  border-bottom: dashed 1px #00b0f4;
+}
 .header__title_info {
   font-size: 50px;
   line-height: 1.24;
@@ -1118,12 +1122,12 @@ iframe {
   color: #89a7aa;
 }
 .nav-info.phone-info {
-  margin-top: 19px;
+  margin-top: 17px;
   text-align: right;
 }
 .nav-info.phone-info a {
   font-size: 20px;
-  line-height: 1;
+  line-height: 1.2;
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
@@ -1215,6 +1219,21 @@ iframe {
 .about-slideset li {
   position: relative;
   overflow: hidden;
+}
+.about-slideset li img {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+.about-slideset li:hover img {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
 }
 .about-slideset li:hover .overlay {
   bottom: 0;
@@ -1326,6 +1345,9 @@ a[class^="section__title_link"] {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-bottom: 1px dashed #00b0f4 !important;
+}
+a[class^="section__title_link"].vip {
+  border-bottom: 1px dashed #d5a93b !important;
 }
 a[class^="section__title_link"]:visited, a[class^="section__title_link"]:focus {
   color: #00b0f4;
@@ -1652,6 +1674,11 @@ a[class^="section__title_link"]:hover, a[class^="section__title_link"]:active {
 .footer-nav .uk-navbar-brand {
   font-size: 15px;
   color: #152844;
+}
+.footer-nav .phone-info {
+  float: none;
+  display: inline-block;
+  margin-top: 0;
 }
 .footer-nav .phone-info a {
   color: #152844;
