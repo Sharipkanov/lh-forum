@@ -1595,10 +1595,24 @@ a[class^="section__title_link"]:hover, a[class^="section__title_link"]:active {
 
 .b__timer {
   background-color: rgba(0, 185, 246, 0.35);
-  padding: 20px 60px;
+  padding: 0 60px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+.b__timer > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.b__timer > div > div {
+  margin: 20px;
+}
+@media screen and (max-width: 440px) {
+  .b__timer > div > div {
+    margin: 20px 0;
+    display: block;
+  }
 }
 .b__timer_title {
   font-size: 24px;
@@ -1614,13 +1628,20 @@ a[class^="section__title_link"]:hover, a[class^="section__title_link"]:active {
   padding: 0;
 }
 .b__timer_info.info .info__item {
-  width: calc(25% - 1px);
   float: left;
   text-align: center;
   border-left: solid 1px rgba(255, 255, 255, 0.2);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+@media screen and (max-width: 440px) {
+  .b__timer_info.info .info__item {
+    padding: 0 10px;
+  }
 }
 .b__timer_info.info .info__item:last-child {
-  width: calc(25% - 2px);
   border-right: solid 1px rgba(255, 255, 255, 0.2);
 }
 .b__timer_info.info .info__item_time {
@@ -1630,11 +1651,23 @@ a[class^="section__title_link"]:hover, a[class^="section__title_link"]:active {
   line-height: 32px;
   margin: 0;
 }
+@media screen and (max-width: 440px) {
+  .b__timer_info.info .info__item_time {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
 .b__timer_info.info .info__item_text {
   font-size: 16px;
   line-height: 1.38;
   color: rgba(255, 255, 255, 0.8);
   margin: 5px 0 0 0;
+}
+@media screen and (max-width: 440px) {
+  .b__timer_info.info .info__item_text {
+    font-size: 12px;
+    line-height: 12px;
+  }
 }
 .b__timer_btn {
   text-align: center;
@@ -1643,6 +1676,8 @@ a[class^="section__title_link"]:hover, a[class^="section__title_link"]:active {
   background-color: rgba(255, 255, 255, 0.12);
   border: solid 1px #ffffff;
   color: #fff;
+  max-width: 240px;
+  width: 100%;
 }
 .b__timer_btn .uk-button:visited, .b__timer_btn .uk-button:active, .b__timer_btn .uk-button:focus {
   background-color: rgba(255, 255, 255, 0.12);
