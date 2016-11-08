@@ -63,5 +63,19 @@ LHFORUM.prototype.detect_select = function(bl) {
         $('.drop-select__wrapper select').each(function () {
             app.detect_select($(this));
         });
+
+        $('[data-youtube-embed]').click(function (e) {
+            var videoUrl = $(this).attr('data-youtube-embed');
+
+            setTimeout(function () {
+                var modal = UIkit.modal("#video-modal");
+
+                if ( modal.isActive() ) {
+                    var iframe = modal.find('iframe');
+
+                    iframe.attr('src', videoUrl);
+                }
+            }, 1);
+        });
     });
 })(jQuery);
