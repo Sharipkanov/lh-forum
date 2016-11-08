@@ -1604,6 +1604,7 @@ a[class^="section__title_link"]:hover, a[class^="section__title_link"]:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 .b__timer > div > div {
   margin: 20px;
@@ -1620,6 +1621,7 @@ a[class^="section__title_link"]:hover, a[class^="section__title_link"]:active {
   font-family: "Open Sans", serif;
   color: #ffffff;
   line-height: 1.2;
+  margin: 0;
 }
 .b__timer_info.info {
   list-style: none;
