@@ -1574,13 +1574,14 @@ a[class^="section__title_link"]:hover, a[class^="section__title_link"]:active {
   color: #89a7aa;
   margin-top: 11px;
   display: inline-block;
+  vertical-align: baseline;
   margin-right: 6px;
 }
 [class^="timing__list_info"] small {
   font-size: 15px;
   color: #152844;
-  margin-top: 11px;
   display: inline-block;
+  vertical-align: baseline;
 }
 
 [class^="timing__list_title"] {
