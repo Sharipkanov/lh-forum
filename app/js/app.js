@@ -55,7 +55,6 @@ LHFORUM.prototype.detect_select = function(bl) {
         });
 
         app.imageHalfSize();
-        app.parentImageSize();
 
         $(doc).on('change', '.drop-select__wrapper select', function () {
             app.detect_select($(this));
