@@ -940,13 +940,14 @@ iframe {
   margin-top: 6px;
 }
 .header__title {
-  font-size: 40px;
   line-height: 1.3;
   color: #ffffff;
   text-align: center;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  font-weight: normal;
   margin-top: 27px;
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: 600;
 }
 .header__title_text {
   font-weight: normal;
@@ -960,14 +961,35 @@ iframe {
   color: #00b0f4;
   border-bottom: dashed 1px #00b0f4;
 }
+.header__title_large {
+  font-size: 70px;
+  line-height: 1.2;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  margin-top: 34px;
+}
+.header__title_large > span {
+  font-size: 18px;
+  font-weight: 300;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 36px;
+}
 .header__title_info {
-  font-size: 50px;
+  font-size: 24px;
   line-height: 1.24;
   color: #ffffff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   font-weight: 600;
   text-align: center;
   margin: 39px 0 0 0;
+}
+.header__title_info .mrs-10 {
+  color: #fff;
+  border: none;
 }
 .header__title_info > span {
   color: #00b0f4;
@@ -984,13 +1006,11 @@ iframe {
 .header__btns_btn {
   border-radius: 4px;
   background-color: #00b0f4 !important;
-  height: auto;
   color: #fff !important;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.9px;
-  padding: 10px 0;
-  max-width: 330px;
+  max-width: 222px;
   width: 100%;
 }
 .header__btns_btn:visited, .header__btns_btn:active, .header__btns_btn:focus {
@@ -1081,7 +1101,7 @@ iframe {
 }
 
 .reg-form-wrap {
-  background-image: url('../images/reg-form-bg.jpg?1478688938');
+  background-image: url('../images/reg-form-bg.jpg?1478775924');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 1170px 418px;
@@ -1090,7 +1110,7 @@ iframe {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .reg-form-wrap {
-    background-image: url('../images/reg-form-bg@2x.jpg?1478688938');
+    background-image: url('../images/reg-form-bg@2x.jpg?1478775924');
   }
 }
 .reg-form-wrap input.error + span.uk-form-help-inline {
@@ -2148,6 +2168,10 @@ a[class^="section__title_link"]:hover, a[class^="section__title_link"]:active {
     font-size: 18px;
     max-width: 250px;
   }
+
+  .header__title_large {
+    font-size: 50px;
+  }
 }
 @media screen and (max-width: 440px) {
   .uk-form-row {
@@ -2156,5 +2180,9 @@ a[class^="section__title_link"]:hover, a[class^="section__title_link"]:active {
   }
   .uk-form-row input {
     box-sizing: border-box;
+  }
+
+  .header__title_large {
+    font-size: 30px;
   }
 }
