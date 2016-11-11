@@ -953,7 +953,7 @@ iframe {
   font-weight: normal;
   text-align: center;
   margin: 35px 0 45px 0;
-  font-size: 30px;
+  font-size: 24px;
   color: #ffffff;
   line-height: 32px;
 }
@@ -1101,7 +1101,7 @@ iframe {
 }
 
 .reg-form-wrap {
-  background-image: url('../images/reg-form-bg.jpg?1478775924');
+  background-image: url('../images/reg-form-bg.jpg?1478785643');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 1170px 418px;
@@ -1110,7 +1110,7 @@ iframe {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .reg-form-wrap {
-    background-image: url('../images/reg-form-bg@2x.jpg?1478775924');
+    background-image: url('../images/reg-form-bg@2x.jpg?1478785643');
   }
 }
 .reg-form-wrap input.error + span.uk-form-help-inline {
@@ -2185,4 +2185,11 @@ a[class^="section__title_link"]:hover, a[class^="section__title_link"]:active {
   .header__title_large {
     font-size: 30px;
   }
+}
+.trans {
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
