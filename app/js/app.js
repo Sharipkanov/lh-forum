@@ -26,7 +26,7 @@ LHFORUM.prototype.detect_select = function (bl) {
         // Past login code here...
         var app = new LHFORUM;
 
-        $('[data-phone-mask]').mask('+7 (000) 000-0000');
+        $('[data-phone-mask]').mask('(000) 000-0000');
 
         setTimeout(function () {
             $('.s-switch').find('li').removeClass('uk-active');
