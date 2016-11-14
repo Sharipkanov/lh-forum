@@ -26,7 +26,7 @@ LHFORUM.prototype.detect_select = function (bl) {
         // Past login code here...
         var app = new LHFORUM;
 
-        $('[data-phone-mask]').mask('(000) 000-0000');
+        /*$('[data-phone-mask]').mask('(000) 000-0000');*/
 
         setTimeout(function () {
             $('.s-switch').find('li').removeClass('uk-active');
@@ -115,5 +115,13 @@ LHFORUM.prototype.detect_select = function (bl) {
                 app.imageHalfSize();
             }, 500);
         });
+
+        var phonesMask = document.querySelectorAll("[data-phone-mask]");
+
+        console.log(phonesMask);
+
+        for(var i=0; i<phonesMask.length; i++) {
+            VMasker(phonesMask[i]).maskPattern("(999) 999 99 99");
+        }
     });
 })(jQuery);

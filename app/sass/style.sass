@@ -269,7 +269,7 @@ iframe
     font-weight: 600
 
     @media screen and (max-width: 480px)
-      font-size: 16px
+      font-size: 18px
 
     &_text
       font-weight: normal
@@ -280,12 +280,16 @@ iframe
       line-height: 32px
 
       @media screen and (max-width: 480px)
-        font-size: 14px
+        font-size: 18px
         line-height: 1.2
 
       > span
         color: #00b0f4
         border-bottom: dashed 1px #00b0f4
+
+        @media screen and (max-width: 480px)
+          display: block
+          border-bottom: 0
 
     &_large
       font-size: 70px
@@ -297,7 +301,7 @@ iframe
       margin-top: 34px
 
       @media screen and (max-width: 480px)
-        font-size: 18px!important
+        font-size: 22px!important
         line-height: 1.2
 
       > span
@@ -318,16 +322,23 @@ iframe
       margin: 39px 0 0 0
 
       @media screen and (max-width: 480px)
-        font-size: 15px!important
+        font-size: 18px!important
         line-height: 1.2
 
       .mrs-10
         color: #fff
         border: none
 
+        @media screen and (max-width: 480px)
+          display: none
+
       > span
         color: #00b0f4
         border-bottom: dashed 1px #00b0f4
+
+        @media screen and (max-width: 480px)
+          display: block
+          border-bottom: 0
 
   &__info
     max-width: 940px
