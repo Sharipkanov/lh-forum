@@ -37,6 +37,7 @@ LHFORUM.prototype.detect_select = function (bl) {
             e.preventDefault();
 
             // var formAction = "https://lh-broker.ru/avangard/biz-forum2016/send.php";
+            var form = $(this);
             var formAction = "send.php";
             var formData = $(this).serialize();
             var controls = {
@@ -49,9 +50,11 @@ LHFORUM.prototype.detect_select = function (bl) {
 
 
             $.post(formAction, formData, function (content) {
+                form.find('input').removeClass('error');
                 if (false == content.response.success) {
                     for (var ei in content.response.errors) {
-                        $('#' + controls[content.response.errors[ei][0]]).addClass('error');
+                        form.find('input[name="' + content.response.errors[ei][0] + '"]').addClass('error');
+                        console.log(ei);
                     }
                 } else {
                     modal.show();
@@ -62,10 +65,10 @@ LHFORUM.prototype.detect_select = function (bl) {
 
                     setTimeout(function () {
                         modal.hide();
-                    }, 3000);
+                    }, 5000);
                 }
 
-                console.log(content);
+                // console.log(content);
             });
 
             return false;
