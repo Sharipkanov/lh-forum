@@ -119,12 +119,10 @@ LHFORUM.prototype.detect_select = function (bl) {
             }, 500);
         });
 
-        var phonesMask = document.querySelectorAll("[data-phone-mask]");
+        var phonesMask = $("[data-phone-mask]");
 
-        console.log(phonesMask);
-
-        for(var i=0; i<phonesMask.length; i++) {
-            VMasker(phonesMask[i]).maskPattern("(999) 999 99 99");
-        }
+        phonesMask.each(function () {
+            $(this).mask("+7 (999) 999 99 99");
+        });
     });
 })(jQuery);
