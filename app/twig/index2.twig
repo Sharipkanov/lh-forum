@@ -1,0 +1,706 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}LARSON&HOLZ: Конференция в Москве "Финансовые итого 2016"{% endblock %}
+
+{% set dataDay = 'Wed, 30 March 2017 19:00:00 GMT' %}
+
+{% set city = 'Санкт-Петербург' %}
+
+{% set eventDate = '30 Марта' %}
+
+{% set headerDate %}
+    <h3 class="header__title_info"><span>{{ eventDate }} в 19:00</span> <span class="mrs-10">•</span> {{ city }}</h3>
+{% endset %}
+
+{% set headerMasterclassDate %}
+    <h4 class="header__title_text"><span>1 и 2 апреля</span> — мастер-классы от Экспертов (площадка Парк Мира)</h4>
+{% endset %}
+
+{% block content %}
+    <div class="uk-container uk-container-center">
+
+        <!-- РЕГИСТРАЦИЯ НА УЧАСТИЕ -->
+        <section class="section" id="reg-block">
+            <div class="section__icon_block">
+                <i class="fri fri-man"></i>
+            </div>
+            <h5 class="section__title_info">РЕГИСТРАЦИЯ НА УЧАСТИЕ</h5>
+
+            <ul class="section__switcher"
+                data-uk-switcher="{animation: 'scale', swiping: false, connect:'#reg-switch'}">
+                <li><a href="#" class="section__title_link">Регистрация</a></li>
+                <li><a href="#" class="section__title_link vip"><i class="fri fri-vip-text"></i></a></li>
+            </ul>
+
+            <ul id="reg-switch" class="uk-switcher">
+                <li>
+                    <div class="section-row reg-form-wrap">
+                        <form class="uk-form">
+                            <div class="uk-form-row">
+                                <input type="text" name="userName" placeholder="">
+                                <span class="uk-form-help-inline">Имя и Фамилия:</span>
+                            </div>
+                            <div class="uk-form-row">
+                                <input type="email" name="userEmail" placeholder="">
+                                <span class="uk-form-help-inline">Email:</span>
+                            </div>
+                            <div class="uk-form-row">
+                                <input type="text" name="userPhone" data-phone-mask placeholder="">
+                                <span class="uk-form-help-inline">Телефон:</span>
+                            </div>
+                            <div class="uk-text-center">
+                                <input type="submit" value="Зарегистрироваться" class="uk-button">
+                            </div>
+                        </form>
+                    </div>
+                </li>
+                <li class="vip-place">
+                    <div class="vip-place-grid">
+                        <div class="uk-text-center">
+                            <article class="uk-article">
+                                <h5 class="uk-article-title">Бизнес</h5>
+                                <p class="uk-article-lead"><span class="price">4 700</span>руб.</p>
+                                <hr class="uk-article-divider">
+                                <ul class="uk-list article-list">
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>3 часа</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>Кофе-брейк</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>Сертификат</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p><strong>Скидка 25%</strong> на все услуги <br> экспонентов</p></li>
+                                </ul>
+                                <div class="uk-text-center">
+                                    <a href="#" class="uk-button buy-btn">Купить</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="uk-text-center">
+                            <article class="uk-article">
+                                <i class="fri fri-star"></i>
+                                <h5 class="uk-article-title">Инвестор</h5>
+                                <p class="uk-article-lead"><span class="price">7 000</span>руб.</p>
+                                <hr class="uk-article-divider">
+                                <ul class="uk-list article-list">
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>3 часа</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>Кофе-брейк</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>Сертификат</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p><strong>1 час бесплатной консультации</strong> <br>у Экспертных аналитиков
+                                        </p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p><strong>Скидка 35%и</strong> <br>на все услуг экспонентов</p></li>
+                                </ul>
+                                <div class="uk-text-center">
+                                    <a href="#" class="uk-button buy-btn">Купить</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="uk-text-center">
+                            <article class="uk-article">
+                                <h5 class="uk-article-title">Золотой инвестор</h5>
+                                <p class="uk-article-lead"><span class="price">10 500</span>руб.</p>
+                                <hr class="uk-article-divider">
+                                <ul class="uk-list article-list">
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>3 часа</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>Кофе-брейк</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>Сертификат</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p><strong>3 часа бесплатной консультации</strong> <br>у Экспертных аналитиков
+                                        </p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p><strong>Скидка 60%</strong> на все услуги<br> экспонентов</p></li>
+                                </ul>
+                                <div class="uk-text-center">
+                                    <a href="#" class="uk-button buy-btn">Купить</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="paymanent">
+                        <form action="" class="uk-form paymanent-form">
+                            <div class="paymanent_header">
+                                <h3 class="section__title uk-text-left">Выберите метод оплаты</h3>
+                            </div>
+                            <div class="paymanent_info">
+                                <div>
+                                    <a href="#"><i class="fri fri-visa"></i></a>
+                                    <a href="#"><i class="fri fri-mastercard"></i></a>
+                                    <a href="#"><i class="fri fri-amex"></i></a>
+                                    <a href="#"><i class="fri fri-discover"></i></a>
+                                    <a href="#"><i class="fri fri-paypal"></i></a>
+                                </div>
+                                <div class="paymanent_data">
+                                    <div class="uk-grid uk-grid-small" data-uk-grid-margin>
+                                        <div class="uk-width-small-1-1 uk-width-large-2-4">
+                                            <label for="">Номер карты</label>
+                                            <input type="text" name="" id="" name="cart_number">
+                                        </div>
+                                        <div class="uk-width-small-1-1 uk-width-large-1-4">
+                                            <label for="">Код</label>
+                                            <input type="text" name="" id="" name="code">
+                                        </div>
+                                        <div class="uk-width-small-1-1 uk-width-large-1-4">
+                                            <label for="">Дата действия</label>
+                                            <div class="drop-selects">
+                                                <div class="drop-select__wrapper">
+                                                    <div class="drop-select__current"></div>
+                                                    <select name="mounth" id="">
+                                                        <option value="">1</option>
+                                                        <option value="">2</option>
+                                                        <option value="">3</option>
+                                                    </select>
+                                                </div>
+                                                <div class="drop-select__wrapper">
+                                                    <div class="drop-select__current"></div>
+                                                    <select name="year" id="">
+                                                        <option value="">2016</option>
+                                                        <option value="">2017</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-small-1-1 uk-width-large-2-4">
+                                            <label for="">Имя и фамилия, указанные на карте</label>
+                                            <input type="text" name="" id="" name="name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="paymanent_footer">
+                                <div>
+                                    <i class="fri fri-lock-icon"></i>
+                                    <p>Larson&Holz не передает и не разглашает Ваши личные данные третьим лицам</p>
+                                </div>
+                                <div>
+                                    <input type="submit" value="Оплатить" class="uk-button">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- СПИКЕРЫ И СПЕЦИАЛЬНЫЕ ГОСТИ -->
+        <section class="section speakers-guests">
+            <div class="section__icon_block">
+                <i class="fri fri-microphone"></i>
+            </div>
+            <h5 class="section__title_info">СПИКЕРЫ И СПЕЦИАЛЬНЫЕ ГОСТИ</h5>
+            <div class="uk-grid uk-grid-medium uk-grid-width-small-1-1 uk-grid-width-medium-1-2" data-uk-grid-margin>
+                <div>
+                    <h3 class="section__title">Специальные гости</h3>
+                    <div class="uk-panel uk-panel-box">
+                        <div class="uk-panel-teaser">
+                            <img src="images/ava4.jpg" alt="">
+                        </div>
+                        <div class="panel-info">
+                            <h3 class="uk-panel-title">Олег Богданов</h3>
+                            <p class="panel-text">Эксперт РБК, опыт работы более 12 лет</p>
+                            <p class="panel-foot-text">Ежегодный бизнес форум при подержке Larson & Holz</p>
+                        </div>
+                    </div>
+                    <div class="uk-panel uk-panel-box">
+                        <div class="uk-panel-teaser">
+                            <img src="images/star-anna.jpg" alt="">
+                            {#<div class="teaser-wrap">#}
+                            {#<p class="teaser-text">Звездная гостья</p>#}
+                            {#</div>#}
+                        </div>
+                        <div class="panel-info">
+                            <h3 class="uk-panel-title">Анна Семенович</h3>
+                            <p class="panel-text">Звездная гостья</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="section__title">Спикеры</h3>
+                    <div class="uk-panel uk-panel-box trans">
+                        <div class="panel-wrapper-link">
+                            <div class="uk-panel-teaser">
+                                <img src="images/ava.jpg" alt="">
+                            </div>
+                            <div class="panel-info">
+                                <h3 class="uk-panel-title">Владимир Кузовлев</h3>
+                                <p class="panel-text">Независимый эксперт, практикующий финансовый управляющий с опытом
+                                    более 17 лет</p>
+                                <p class="panel-foot-text">Ежегодный бизнес форум при подержке Larson & Holz</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-panel uk-panel-box trans">
+                        <div class="panel-wrapper-link">
+                            <div class="uk-panel-teaser">
+                                <img src="images/ava3.jpg" alt="">
+                            </div>
+                            <div class="panel-info">
+                                <h3 class="uk-panel-title">Олег Дмитриев</h3>
+                                <p class="panel-text">независимый эксперт, практикующий финансовый управляющий с опытом
+                                    более 15 лет</p>
+                                <p class="panel-foot-text">Ежегодный бизнес форум при подержке Larson & Holz</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-panel uk-panel-box trans">
+                        <div class="panel-wrapper-link">
+                            <div class="uk-panel-teaser">
+                                <img src="images/ava2.jpg" alt="">
+                            </div>
+                            <div class="panel-info">
+                                <h3 class="uk-panel-title">Ольга Прохода</h3>
+                                <p class="panel-text">Финансовый эксперт, аналитик и консультант. Практика более 8
+                                    лет</p>
+                                <p class="panel-foot-text">Ежегодный бизнес форум при подержке Larson & Holz</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- О ФОРУМЕ -->
+        <section class="section section-about">
+            <div class="section__icon_block">
+                <i class="fri fri-shape-circle"></i>
+            </div>
+            <h5 class="section__title_info">О ФОРУМЕ</h5>
+
+            <h3 class="section__title">Ежегодный бизнес форум от Larson&Holz</h3>
+
+            {#<div class="uk-text-center">#}
+            {#<p class="section__text">Our long standing vision has been to bypass the usual admin dashboard structure, and move forward with a more sophisticated yet simple framework that would create a credible impact on the many conventional dashboard users.</p>#}
+            {#<p class="section__text">Our long standing vision has been to bypass the usual admin dashboard structure, and move forward with a more sophisticated yet simple framework that would create a credible impact on the many conventional dashboard users.</p>#}
+            {#</div>#}
+
+            <div data-uk-slideset="{small: 2, medium: 3, large: 5, animation: 'slide-horizontal'}"
+                 class="about-slideset section-row uk-margin-small-top">
+                <div class="uk-slidenav-position">
+                    <ul class="uk-grid uk-slideset uk-grid-collapse">
+                        <li>
+                            <a href="#video-modal" data-uk-modal="{center:true}"
+                               data-youtube-embed="https://www.youtube.com/embed/Apkb-loWEE0?list=PLCulEi7P7V1uin_sHiQKDXTmKbLDc95wn">
+                                <img src="images/slide-imgs/slide-img.jpg" alt="">
+                                <i class="fri fri-play-btn"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#video-modal" data-uk-modal="{center:true}"
+                               data-youtube-embed="https://www.youtube.com/embed/JnR-5w1jHDk?list=PLCulEi7P7V1uin_sHiQKDXTmKbLDc95wn">
+                                <img src="images/slide-imgs/slide-img-2.jpg" alt="">
+                                <i class="fri fri-play-btn"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#video-modal" data-uk-modal="{center:true}"
+                               data-youtube-embed="https://www.youtube.com/embed/5kNH2B-2dD4?list=PL4FFAAB4018D0A216">
+                                <img src="images/slide-imgs/slide-img-3.jpg" alt="">
+                                <i class="fri fri-play-btn"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#video-modal" data-uk-modal="{center:true}"
+                               data-youtube-embed="https://www.youtube.com/embed/aBmb81zVVdU?list=PL4FFAAB4018D0A216">
+                                <img src="images/slide-imgs/slide-img-4.jpg" alt="">
+                                <i class="fri fri-play-btn"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#video-modal" data-uk-modal="{center:true}"
+                               data-youtube-embed="https://www.youtube.com/embed/1K5MqvxfyOI?list=PL4FFAAB4018D0A216">
+                                <img src="images/slide-imgs/slide-img-5.jpg" alt="">
+                                <i class="fri fri-play-btn"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="uk-hidden-large">
+                        <a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slideset-item="previous"></a>
+                        <a href="" class="uk-slidenav uk-slidenav-next" data-uk-slideset-item="next"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ТАЙМИНГ ФОРУМА -->
+        <section class="section section-timing">
+            <div class="section__icon_block">
+                <i class="fri fri-clock"></i>
+            </div>
+            <h5 class="section__title_info">ТАЙМИНГ ФОРУМА</h5>
+
+            <ul class="section__switcher"
+                data-uk-switcher="{animation: 'scale', swiping: false, connect:'#timing-switch'}">
+                <li><a href="#" class="section__title_link">{{ eventDate }}</a></li>
+                <li><a href="#" class="section__title_link">1 и 2 декабря</a></li>
+            </ul>
+
+            <ul id="timing-switch" class="uk-switcher">
+                <li>
+                    <div>
+                        <ul class="timing__list uk-list">
+                            <li>
+                                <p class="timing__list_time">18:40</p>
+                                <div class="timing__list_info">
+                                    <p class="timing__list_title">Регистрация участников Форума</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="timing__list_time">19:00</p>
+                                <div class="timing__list_info">
+                                    <p class="timing__list_title">Что будет с рублем, долларом и евро в 2017 году, как
+                                        увеличить доходы от бизнеса, как удержать бизнес во время кризиса.</p>
+                                    <p><span>Спикер:</span>
+                                        <small>Ольга Прохода, Владимир Кузовлев. Ведущий Олег Богданов и Звездная
+                                            Гостья.
+                                        </small>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="timing__list_time">20:20</p>
+                                <div class="timing__list_info">
+                                    <p class="timing__list_title">Кофе-брейк. Персональное общение с Экспертами в
+                                        промо-офисах.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="timing__list_time">20:40</p>
+                                <div class="timing__list_info">
+                                    <p class="timing__list_title">Золото, нефть, экономическое положение. Формирование
+                                        инвестиционного портфеля на 2017 год от Олега Дмитриева.</p>
+                                    <p><span>Спикер:</span>
+                                        <small>Олег Дмитриев</small>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="timing__list_time">21:30</p>
+                                <div class="timing__list_info">
+                                    <p class="timing__list_title">Пресс-конференция</p>
+                                    <p>
+                                        <span>Спикер:</span>
+                                        <small>Ольга Прохода,</small>
+                                        <small>Владимир Кузовлев,</small>
+                                        <small>Олег Дмитриев,</small>
+                                        <small>Олег Богданов</small>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="timing__list_time">21:50 — 22:00</p>
+                                <div class="timing__list_info">
+                                    <p class="timing__list_title">Закрытие форума. Вручение сертификатов, подарков.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <ul class="timing__list uk-list boxed-list">
+                        <li>
+                            <p class="timing__list_time">10:00 — 19:30</p>
+                            <div class="timing__list_info">
+                                <p class="timing__list_title">Частные консультации</p>
+                                <p>
+                                    <small>Запись {{ eventDate }} у Организаторов</small>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="timing__list uk-list boxed-list">
+                        <li>
+                            <p class="timing__list_time">12:00 — 19:00</p>
+                            <div class="timing__list_info">
+                                <p class="timing__list_title">Парад мастер-классов</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- РЕКЛАМА -->
+        <div class="section__blue">
+            <div class="uk-grid uk-grid-small" data-uk-grid-margin>
+                <div class="uk-width-small-1-1 uk-width-medium-4-6">
+                    <h2 class="advertise-text">Участие бесплатно, но количество мест ограничено!</h2>
+                </div>
+                <div class="uk-width-small-1-1 uk-width-medium-2-6 advertise-btn-wrap">
+                    <a href="#reg-block" class="advertise-btn uk-button uk-button-default" data-uk-smooth-scroll> <i
+                                class="btn1-plus"></i> Участвовать</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- НАШИ ПАРТНЕРЫ -->
+        <section class="section">
+            <div class="section__icon_block">
+                <i class="fri fri-heart"></i>
+            </div>
+            <h5 class="section__title_info">НАШИ ПАРТНЕРЫ</h5>
+
+            <h3 class="section__title">Партнеры</h3>
+
+            <div class="partners-list uk-margin-small-top uk-text-center">
+                <img src="images/partners/autochartist.jpg" alt="" data-half-size>
+                <img src="images/partners/dow-jones.jpg" alt="" data-half-size>
+                <img src="images/partners/rbc.jpg" alt="" data-half-size>
+                <img src="images/partners/forbes.jpg" alt="" data-half-size>
+                <img src="images/partners/finam.jpg" alt="" data-half-size>
+                <img src="images/partners/commersant.jpg" alt="" data-half-size>
+                <img src="images/partners/ru-24.jpg" alt="" data-half-size>
+                <img src="images/partners/mkru.jpg" alt="" data-half-size>
+                <img src="images/partners/expert.jpg" alt="" data-half-size>
+            </div>
+        </section>
+
+        <!-- МЕСТО ПРОВЕДЕНИЯ -->
+        <section class="section">
+            <div class="section__icon_block">
+                <i class="fri fri-flag"></i>
+            </div>
+            <h5 class="section__title_info">МЕСТО ПРОВЕДЕНИЯ</h5>
+
+            <h3 class="section__title">{{ eventDate }}, Рэдиссон Славянская, Москва <br> Начало в 19:00</h3>
+
+            <div class="uk-text-center">
+                <p class="section__text">Москва, пл. Европы 2</p>
+            </div>
+
+            <div class="uk-margin-small-top">
+                <div class="uk-grid uk-grid-collapse uk-grid-width-small-1-1 uk-grid-width-medium-1-2 uk-grid-match contacts-grid">
+                    <div style="background-image: url(images/place.jpg);"></div>
+                    <div>
+                        <img src="images/map.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- РЕГИСТРАЦИЯ НА УЧАСТИЕ -->
+        <section class="section" id="aaaa">
+            <div class="section__icon_block">
+                <i class="fri fri-man"></i>
+            </div>
+            <h5 class="section__title_info">РЕГИСТРАЦИЯ НА УЧАСТИЕ</h5>
+
+            <ul class="section__switcher"
+                data-uk-switcher="{animation: 'scale', swiping: false, connect:'#reg2-switch'}">
+                <li><a href="#" class="section__title_link">Регистрация</a></li>
+                <li><a href="#" class="section__title_link vip"><i class="fri fri-vip-text"></i></a></li>
+            </ul>
+
+            <ul id="reg2-switch" class="uk-switcher">
+                <li>
+                    <div class="section-row reg-form-wrap">
+                        <form class="uk-form">
+                            <div class="uk-form-row">
+                                <input type="text" name="userName" placeholder="">
+                                <span class="uk-form-help-inline">Имя и Фамилия:</span>
+                            </div>
+                            <div class="uk-form-row">
+                                <input type="email" name="userEmail" placeholder="">
+                                <span class="uk-form-help-inline">Email:</span>
+                            </div>
+                            <div class="uk-form-row">
+                                <input type="text" name="userPhone" data-phone-mask placeholder="">
+                                <span class="uk-form-help-inline">Телефон:</span>
+                            </div>
+                            <div class="uk-text-center">
+                                <input type="submit" value="Зарегистрироваться" class="uk-button">
+                            </div>
+                        </form>
+                    </div>
+                </li>
+                <li class="vip-place">
+                    <div class="vip-place-grid">
+                        <div class="uk-text-center">
+                            <article class="uk-article">
+                                <h5 class="uk-article-title">Бизнес</h5>
+                                <p class="uk-article-lead"><span class="price">4 700</span>руб.</p>
+                                <hr class="uk-article-divider">
+                                <ul class="uk-list article-list">
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>3 часа</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>Кофе-брейк</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>Сертификат</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p><strong>Скидка 25%</strong> на все услуги <br> экспонентов</p></li>
+                                </ul>
+                                <div class="uk-text-center">
+                                    <a href="#" class="uk-button buy-btn">Купить</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="uk-text-center">
+                            <article class="uk-article">
+                                <i class="fri fri-star"></i>
+                                <h5 class="uk-article-title">Инвестор</h5>
+                                <p class="uk-article-lead"><span class="price">7 000</span>руб.</p>
+                                <hr class="uk-article-divider">
+                                <ul class="uk-list article-list">
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>3 часа</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>Кофе-брейк</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>Сертификат</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p><strong>1 час бесплатной консультации</strong> <br>у Экспертных аналитиков
+                                        </p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p><strong>Скидка 35%и</strong> <br>на все услуг экспонентов</p></li>
+                                </ul>
+                                <div class="uk-text-center">
+                                    <a href="#" class="uk-button buy-btn">Купить</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="uk-text-center">
+                            <article class="uk-article">
+                                <h5 class="uk-article-title">Золотой инвестор</h5>
+                                <p class="uk-article-lead"><span class="price">10 500</span>руб.</p>
+                                <hr class="uk-article-divider">
+                                <ul class="uk-list article-list">
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>3 часа</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>Кофе-брейк</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p>Сертификат</p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p><strong>3 часа бесплатной консультации</strong> <br>у Экспертных аналитиков
+                                        </p></li>
+                                    <li>
+                                        <div class="article-list-circle"></div>
+                                        <p><strong>Скидка 60%</strong> на все услуги<br> экспонентов</p></li>
+                                </ul>
+                                <div class="uk-text-center">
+                                    <a href="#" class="uk-button buy-btn">Купить</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="paymanent">
+                        <form action="" class="uk-form paymanent-form">
+                            <div class="paymanent_header">
+                                <h3 class="section__title uk-text-left">Выберите метод оплаты</h3>
+                            </div>
+                            <div class="paymanent_info">
+                                <div>
+                                    <a href="#"><i class="fri fri-visa"></i></a>
+                                    <a href="#"><i class="fri fri-mastercard"></i></a>
+                                    <a href="#"><i class="fri fri-amex"></i></a>
+                                    <a href="#"><i class="fri fri-discover"></i></a>
+                                    <a href="#"><i class="fri fri-paypal"></i></a>
+                                </div>
+                                <div class="paymanent_data">
+                                    <div class="uk-grid uk-grid-small" data-uk-grid-margin>
+                                        <div class="uk-width-small-1-1 uk-width-large-2-4">
+                                            <label for="">Номер карты</label>
+                                            <input type="text" name="" id="" name="cart_number">
+                                        </div>
+                                        <div class="uk-width-small-1-1 uk-width-large-1-4">
+                                            <label for="">Код</label>
+                                            <input type="text" name="" id="" name="code">
+                                        </div>
+                                        <div class="uk-width-small-1-1 uk-width-large-1-4">
+                                            <label for="">Дата действия</label>
+                                            <div class="drop-selects">
+                                                <div class="drop-select__wrapper">
+                                                    <div class="drop-select__current"></div>
+                                                    <select name="mounth" id="">
+                                                        <option value="">1</option>
+                                                        <option value="">2</option>
+                                                        <option value="">3</option>
+                                                    </select>
+                                                </div>
+                                                <div class="drop-select__wrapper">
+                                                    <div class="drop-select__current"></div>
+                                                    <select name="year" id="">
+                                                        <option value="">2016</option>
+                                                        <option value="">2017</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-small-1-1 uk-width-large-2-4">
+                                            <label for="">Имя и фамилия, указанные на карте</label>
+                                            <input type="text" name="" id="" name="name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="paymanent_footer">
+                                <div>
+                                    <i class="fri fri-lock-icon"></i>
+                                    <p>Larson&Holz не передает и не разглашает Ваши личные данные третьим лицам</p>
+                                </div>
+                                <div>
+                                    <input type="submit" value="Оплатить" class="uk-button">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <div id="success-modal" class="uk-modal">
+        <div class="uk-modal-dialog uk-text-center">
+            <a href="" class="uk-modal-close"><i class="fri fri-remove-icon"></i></a>
+            <i class="fri fri-success"></i>
+            <h4 class="section__title">Вы успешно зарегистрировались!</h4>
+            <p class="section__text">Подтверждение о регистрации на Форум вы получите на эл.почту и смс.</p>
+            <p class="section__text">Спасибо!</p>
+        </div>
+    </div>
+
+    <div id="video-modal" class="uk-modal video-modal">
+        <div class="uk-modal-dialog uk-text-center">
+            <a href="" class="uk-modal-close"><i class="fri fri-remove-icon"></i></a>
+            <iframe width="854" height="480" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+{% endblock %}
