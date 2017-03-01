@@ -121,7 +121,8 @@ gulp.task('compass', function () {
             sass: sources.sass.dist,
             css: sources.css.dist,
             js: sources.js.dist,
-            image: 'app/images'
+            image: 'app/images',
+            sourcemap: true
         }))
         .pipe(gulp.dest(sources.css.dist))
         .pipe(browserSync.reload({stream: true}));
@@ -222,10 +223,10 @@ gulp.task('images', function () {
  ---------------------------------------------------------------------------- */
 gulp.task('watch', function () {
     // gulp.watch('bower.json', ["bower"]);
-    gulp.watch(sources.sass.watch, ['sass']);
+    gulp.watch(sources.sass.watch, ['compass']);
     // gulp.watch(sources.pug.watch, ["pug"]);
     gulp.watch(sources.twig.watch, ["twig"]);
     gulp.watch(sources.js.watch).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['browser-sync', 'twig', 'sass', 'watch']);
+gulp.task('default', ['browser-sync', 'twig', 'compass', 'watch']);

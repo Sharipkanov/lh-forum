@@ -254,6 +254,9 @@ iframe
   background-size: cover
   background-attachment: fixed
   min-width: 320px
+  
+  &.header-piter
+    background-image: url(../images/header-bg2.jpg)
 
   [class^="section__text"]
     margin-top: 6px
@@ -266,10 +269,20 @@ iframe
     margin-top: 27px
     margin-bottom: 40px
     font-size: 32px
-    font-weight: 600
+    font-weight: normal
+    &:not(.not-bold)
+      font-weight: 600
+
+    .bold
+      font-weight: 600
 
     @media screen and (max-width: 480px)
       font-size: 18px
+
+    &.fz28
+      font-size: 28px
+      margin-top: 0
+      margin-bottom: 20px
 
     &_text
       font-weight: normal
@@ -300,6 +313,11 @@ iframe
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7)
       margin-top: 34px
 
+      &.second-type-piter
+        font-size: 50px
+        //margin-bottom: 15px
+        margin-top: 5px
+
       @media screen and (max-width: 480px)
         font-size: 22px!important
         line-height: 1.2
@@ -311,6 +329,14 @@ iframe
         color: #ffffff
         text-align: center
         margin-top: 36px
+
+    &_hazin
+      font-size: 24px
+      font-weight: 600
+      color: #fff
+      text-align: center
+      line-height: normal
+      //padding: 20px 0
 
     &_info
       font-size: 24px
@@ -347,6 +373,9 @@ iframe
 
   &__btns
     margin-bottom: 66px
+
+    &.mb30
+      margin-bottom: 30px
 
     &_btn
       border-radius: 4px
@@ -465,6 +494,7 @@ iframe
         display: block
         font-size: 12px
         color: #00b0f4
+        margin-top: 8px
 
 .section
   max-width: 1170px
@@ -776,7 +806,7 @@ a[class^="section__title_link"]
 
 .timing__list
   position: relative
-  width: calc(100% - 124px)
+  width: calc(100% - 90px)
   margin: 38px auto 0
   padding: 0 0 0 50px
   border-left: 1px solid #00b0f4
@@ -802,6 +832,10 @@ a[class^="section__title_link"]
       padding: 20px 0
   li
     position: relative
+    display: flex
+
+    @media screen and (max-width: 767px)
+      display: block
 
     &:not(:last-child)
       margin-bottom: 47px
@@ -827,17 +861,17 @@ a[class^="section__title_link"]
   color: #00b0f4
   font-weight: 600
   width: auto
-  float: left
+  //float: left
   vertical-align: top
   line-height: 30px
-  min-width: 77px
-  max-width: 201px
+  //min-width: 77px
+  //max-width: 201px
   position: relative
   margin: 0 20px 0 0!important
 
 [class^="timing__list_info"]
-  float: left
-  width: calc(100% - 231px)
+  //float: left
+  //width: calc(100% - 231px)
   padding: 5px
 
   span
@@ -1376,3 +1410,74 @@ a[class^="section__title_link"]
   -webkit-transition: all 0.3s ease
   -ms-transition: all 0.3s ease
   -o-transition: all 0.3s ease
+
+.events-listing__item
+  padding-left: 15px
+  margin: 10px 0 10px 10px
+  position: relative
+  font-weight: 600
+  font-size: 18px
+
+  @media screen and (max-width: 767px)
+    font-size: 12px
+  &:before
+    display: block
+    content: ''
+    position: absolute
+    left: 0
+    top: 10px
+    width: 4px
+    height: 4px
+    background: #333
+    border-radius: 100%
+    //margin-top: -2px
+
+.header__hazin
+  display: flex
+  justify-content: space-between
+  align-items: center
+  color: #fff
+  text-align: center
+  padding: 20px 20px 20px
+  font-weight: 300
+
+  strong
+    font-weight: 600
+
+  @media screen and (max-width: 900px)
+    padding: 40px 0 20px
+
+  @media screen and (max-width: 767px)
+    flex-wrap: wrap
+
+  &-left, &-right
+    flex-grow: 1
+    flex-basis: 0
+    font-size: 18px
+    line-height: 1.5
+    //font-style: italic
+
+    @media screen and (max-width: 767px)
+      width: 100%
+      flex-basis: auto
+      text-align: center !important
+
+  &-center
+    margin: 0 30px
+
+    @media screen and (max-width: 767px)
+      margin: 30px auto
+
+  .fz24
+    font-size: 24px
+
+  a
+    color: #00b0f4
+    border-bottom: 1px dashed #00b0f4
+    &:hover
+      border-color: transparent
+      text-decoration: none
+
+
+.icon-hazin-header
+  +sprite(icon-hazin-header)
