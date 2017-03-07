@@ -1169,7 +1169,7 @@ iframe {
 }
 
 .reg-form-wrap {
-  background-image: url('../images/reg-form-bg.jpg?1488343794');
+  background-image: url('../images/reg-form-bg.jpg?1478785643');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 1170px 418px;
@@ -1178,7 +1178,7 @@ iframe {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .reg-form-wrap {
-    background-image: url('../images/reg-form-bg@2x.jpg?1488343794');
+    background-image: url('../images/reg-form-bg@2x.jpg?1478785643');
   }
 }
 .reg-form-wrap input.error + span.uk-form-help-inline {
@@ -2360,6 +2360,16 @@ a[class^="section__title_link"]:hover, a[class^="section__title_link"]:active {
     background-position: 0 -584px;
     height: 166px;
     width: 166px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .small-blue-text {
+    color: #00b0f4;
+  }
+
+  .small-ttu {
+    text-transform: uppercase;
   }
 }
 

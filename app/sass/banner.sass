@@ -1,0 +1,124 @@
+@import "mixins/mixins"
+
+@font-face
+    font-family: 'helios'
+    src: url('../banner-font/heliosc.eot?#iefix') format('embedded-opentype'), url('../banner-font/heliosc.otf') format('woff'), url('../banner-font/heliosc.ttf') format('truetype'), url('../banner-font/heliosc.svg#helios') format('svg')
+    font-style: normal
+    font-weight: normal
+
+@font-face
+    font-family: 'helios-compressedbold'
+    src: url('../banner-font/heliosextracompressedc.eot?#iefix') format('embedded-opentype'), url('../banner-font/heliosextracompressedc.otf') format('woff'), url('../banner-font/heliosextracompressedc.ttf') format('truetype'), url('../banner-font/heliosextracompressedc.svg#helios') format('svg')
+    font-style: normal
+    font-weight: normal
+
+@font-face
+    font-family: 'helios-light-c'
+    src: url('../banner-font/helios-cond-light.eot?#iefix') format('embedded-opentype'), url('../banner-font/helios-cond-light.otf') format('woff'), url('../banner-font/helios-cond-light.ttf') format('truetype'), url('../banner-font/helios-cond-light.svg#helios') format('svg')
+    font-style: normal
+    font-weight: normal
+
+@font-face
+    font-family: 'helios-thin'
+    src: url('../banner-font/heliosthinc.eot?#iefix') format('embedded-opentype'), url('../banner-font/heliosthinc.otf') format('woff'), url('../banner-font/heliosthinc.ttf') format('truetype'), url('../banner-font/heliosthinc.svg#helios') format('svg')
+    font-style: normal
+    font-weight: normal
+
+body
+    font-size: 14px
+    height: 250px
+    width: 300px
+    margin: 0
+    font-family: 'helios', arial
+
+.presentation
+    width: 300px
+    height: 250px
+    overflow: hidden
+    display: block
+    background: #508ec4
+    border: 1px solid #000
+    color: #fff
+    line-height: 1
+    font-family: 'helios-light-c', arial
+    font-size: 18px
+
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        font-size: 31px
+        font-family: 'helios-light-c'
+
+    &__date
+        background: url(../banner-images/rectangle.svg) center center no-repeat
+        background-size: contain
+        vertical-align: middle
+        text-align: center
+        width: 50px
+        padding: 5px 10px 15px 5px
+        //height: 65px
+        display: inline-flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        font-size: 14px
+        font-family: 'helios-light-c', arial
+        margin-left: -5px
+        margin-right: -10px
+
+        &-big
+            font-size: 36px
+            font-family: "helios-light-c", arial
+
+    &__title
+        flex-grow: 1
+        text-align: center
+        margin: auto
+        padding-bottom: 10px
+
+    &__image-text
+        text-align: right
+        padding-right: 33px
+        margin-top: -16px
+
+    &__image-bg
+        background: url(../banner-images/hazin-2x.jpg) no-repeat center center
+        background-size: cover
+        text-align: right
+        padding:  0 10px
+        font-size: 40px
+        font-family: 'helios-compressedbold', arial
+
+    &__image-big-text
+        font-size: 51px
+        margin-top: -10px
+
+    &__animate-text
+        font-size: 34px
+        padding: 5px 5px
+        line-height: 1
+
+        &:after
+            display: block
+            content: ''
+            clear: both
+
+.presentation__animate-top-text, .presentation__animate-bottom-text
+    position: relative
+    display: inline-block
+
+    &:after
+        display: block
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: #ca3726
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5)
+
+.presentation__animate-bottom-text
+    margin-top: 5px
+    float: right
