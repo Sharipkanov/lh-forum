@@ -42,6 +42,7 @@ body
     line-height: 1
     font-family: 'helios-light-c', arial
     font-size: 18px
+    text-decoration: none
 
     &__header
         display: flex
@@ -98,15 +99,40 @@ body
         font-size: 34px
         padding: 5px 5px
         line-height: 1
+        height: 80px
+        position: relative
 
-        &:after
-            display: block
-            content: ''
-            clear: both
+.presentation__animate-item
+    position: absolute
+    padding: 10px 5px
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+
+    &.active
+        z-index: 2
+        .presentation__animate-top-text, .presentation__animate-bottom-text
+            +transform(translateX(0))
+
+        .presentation__animate-button
+            +transform(scale(1))
+
+    &:after
+        display: block
+        content: ''
+        clear: both
+
+    &.button-more
+        display: flex
+        align-items: center
+        justify-content: center
 
 .presentation__animate-top-text, .presentation__animate-bottom-text
     position: relative
     display: inline-block
+    +transform(translateX(-200%))
+    +transition()
 
     &:after
         display: block
@@ -119,6 +145,39 @@ body
         background: #ca3726
         box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5)
 
+    span
+        position: relative
+        z-index: 1
+
 .presentation__animate-bottom-text
     margin-top: 5px
     float: right
+    +transform(translateX(200%))
+
+.presentation__animate-button
+    display: inline-block
+    vertical-align: middle
+    font-size: 24px
+    cursor: pointer
+    line-height: 40px
+    padding: 0 20px
+    background: #ca3726
+    box-shadow: 0 2px 0 0 #8d1b0e
+    border-radius: 4px
+    +transition()
+    +transform(scale(0))
+
+    &:hover
+        box-shadow: 0 2px 0 0 #8d1b0e, 0 0 0 500px rgba(#000, 0.1) inset
+
+    span
+        display: inline-block
+        vertical-align: middle
+
+    &:after
+        display: inline-block
+        vertical-align: middle
+        border: 5px solid transparent
+        border-left: 7px solid #fff
+        content: ''
+        margin-left: 10px
