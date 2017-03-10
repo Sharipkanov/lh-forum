@@ -48,10 +48,10 @@ var BANNER = (function () {
         };
 
         switcher.init = function () {
-            var current = 0;
+            var current = 1;
             var max = switcher.elements.length;
 
-            setTimeout(function () {
+            // setTimeout(function () {
                 setInterval(function () {
 
                     for (i = 0; i < switcher.elements.length; i++) {
@@ -65,8 +65,8 @@ var BANNER = (function () {
                     current++;
                     if(current === max)
                         current = 0;
-                }, 3000);
-            }, 2000);
+                }, 5000);
+            // }, 2000);
         };
 
         switcher.init();

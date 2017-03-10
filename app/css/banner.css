@@ -118,6 +118,7 @@ body {
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
+  opacity: 1;
 }
 .presentation__animate-item.active .presentation__animate-button {
   -webkit-transform: scale(1);
@@ -140,15 +141,16 @@ body {
 .presentation__animate-top-text, .presentation__animate-bottom-text {
   position: relative;
   display: inline-block;
-  -webkit-transform: translateX(-200%);
-  -moz-transform: translateX(-200%);
-  -ms-transform: translateX(-200%);
-  -o-transform: translateX(-200%);
-  transform: translateX(-200%);
-  -webkit-transition: all 1s ease 0s;
-  -moz-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  opacity: 0;
+  -webkit-transition: all 3s ease;
+  -moz-transition: all 3s ease;
+  -o-transition: all 3s ease;
+  transition: all 3s ease;
 }
 .presentation__animate-top-text:after, .presentation__animate-bottom-text:after {
   display: block;
@@ -169,11 +171,12 @@ body {
 .presentation__animate-bottom-text {
   margin-top: 5px;
   float: right;
-  -webkit-transform: translateX(200%);
-  -moz-transform: translateX(200%);
-  -ms-transform: translateX(200%);
-  -o-transform: translateX(200%);
-  transform: translateX(200%);
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
 }
 
 .presentation__animate-button {
@@ -186,10 +189,10 @@ body {
   background: #ca3726;
   box-shadow: 0 2px 0 0 #8d1b0e;
   border-radius: 4px;
-  -webkit-transition: all 1s ease 0s;
-  -moz-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
+  -webkit-transition: all 3s ease;
+  -moz-transition: all 3s ease;
+  -o-transition: all 3s ease;
+  transition: all 3s ease;
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);

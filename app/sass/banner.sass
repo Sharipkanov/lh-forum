@@ -114,6 +114,7 @@ body
         z-index: 2
         .presentation__animate-top-text, .presentation__animate-bottom-text
             +transform(translateX(0))
+            opacity: 1
 
         .presentation__animate-button
             +transform(scale(1))
@@ -131,8 +132,9 @@ body
 .presentation__animate-top-text, .presentation__animate-bottom-text
     position: relative
     display: inline-block
-    +transform(translateX(-200%))
-    +transition()
+    +transform(translateX(-100%))
+    opacity: 0
+    +transition(all 3s ease)
 
     &:after
         display: block
@@ -152,7 +154,8 @@ body
 .presentation__animate-bottom-text
     margin-top: 5px
     float: right
-    +transform(translateX(200%))
+    opacity: 0
+    +transform(translateX(100%))
 
 .presentation__animate-button
     display: inline-block
@@ -164,7 +167,7 @@ body
     background: #ca3726
     box-shadow: 0 2px 0 0 #8d1b0e
     border-radius: 4px
-    +transition()
+    +transition(all 3s ease)
     +transform(scale(0))
 
     &:hover
