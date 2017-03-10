@@ -1385,6 +1385,16 @@ a[class^="section__title_link"]
   .advertise-btn-wrap
     text-align: center
 
+  .icon-mobile-phone
+    position: fixed
+    bottom: 15px
+    right: 15px
+    display: block
+
+    &:before
+      content: ''
+      +sprite(icon-mobile-phone)
+
 @media screen and (max-width: 640px)
   .header__btns_btn
     font-size: 18px
@@ -1488,3 +1498,4 @@ a[class^="section__title_link"]
 
   .small-ttu
     text-transform: uppercase
+
