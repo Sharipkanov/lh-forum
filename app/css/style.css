@@ -1169,7 +1169,7 @@ iframe {
 }
 
 .reg-form-wrap {
-  background-image: url('../images/reg-form-bg.jpg?1488343794');
+  background-image: url('../images/reg-form-bg.jpg?1478697432');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 1170px 418px;
@@ -1178,7 +1178,7 @@ iframe {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .reg-form-wrap {
-    background-image: url('../images/reg-form-bg@2x.jpg?1488343794');
+    background-image: url('../images/reg-form-bg@2x.jpg?1478697452');
   }
 }
 .reg-form-wrap input.error + span.uk-form-help-inline {

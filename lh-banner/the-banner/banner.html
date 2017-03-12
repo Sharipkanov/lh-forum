@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="banner.css">
+</head>
+
+<body>
+<a href="http://piter2017.ru/?utm_source=rbk&utm_medium=rbk&utm_campaign=piter2017" target="_blank" class="presentation" onclick="href1(this)">
+    <div class="presentation__header">
+        <div class="presentation__date">
+            <div class="presentation__date-big">30</div>
+            <div class="presentation__date-small">марта</div>
+        </div>
+        <div class="presentation__title">
+            <div class="presentation__title-small">санкт-петербургский</div>
+            <div class="presentation__title-big">БИЗНЕС-КОНГРЕСС</div>
+        </div>
+    </div>
+    <div class="presentation__image">
+        <div class="presentation__image-text">с участием</div>
+        <div class="presentation__image-bg">
+            <div class="presentation__image-small-text">МИХАИЛА</div>
+            <div class="presentation__image-big-text">ХАЗИНА</div>
+        </div>
+    </div>
+    <div class="presentation__animate-text">
+        <div class="presentation__animate-item active">
+            <div class="presentation__animate-top-text"><span>что будет с рублем,</span></div>
+            <div></div>
+            <div class="presentation__animate-bottom-text"><span>долларом, евро?</span></div>
+        </div>
+        <div class="presentation__animate-item">
+            <div class="presentation__animate-top-text"><span>как удержать бизнес</span></div>
+            <div></div>
+            <div class="presentation__animate-bottom-text"><span>во время кризиса?</span></div>
+        </div>
+        <div class="presentation__animate-item">
+            <div class="presentation__animate-top-text"><span>как увеличить доходы</span></div>
+            <div></div>
+            <div class="presentation__animate-bottom-text"><span>от бизнеса?</span></div>
+        </div>
+        <div class="presentation__animate-item button-more">
+            <div class="presentation__animate-button"><span>Узнать подробности</span></div>
+        </div>
+    </div>
+</a>
+
+<script src="banner.js"></script>
+
+<script language="JavaScript" type="text/javascript">
+    function getParam(url, k, v) {
+        var params = {}, p;
+        try {
+            p = url.split('?')[1].split('&');
+            for (var i = 0, max = p.length, pair; i < max; i++) {
+                pair = p[i].split('=');
+                (pair[0] && pair[1]) && (params[pair[0]] = pair[1]);
+            }
+            if (params.hasOwnProperty(k))
+                return unescape(params[k]);
+        } catch (e) {}
+
+        return (v == undefined) ? undefined : v;
+    }
+
+    var link1 = getParam(document.location.href, 'clickTAG');
+
+    function href1(element) {
+        element.href = link1;
+    }
+</script>
+</body>
+
+</html>
